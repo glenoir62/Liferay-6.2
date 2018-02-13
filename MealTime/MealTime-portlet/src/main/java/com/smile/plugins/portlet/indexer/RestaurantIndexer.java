@@ -108,7 +108,7 @@ public class RestaurantIndexer extends BaseIndexer {
 		Restaurant restaurant = (Restaurant) obj;
 		Document document = getDocument(restaurant);
 
-		SearchEngineUtil.updateDocument(getSearchEngineId(), restaurant.getCompanyId(), document);
+		SearchEngineUtil.updateDocument(getSearchEngineId(), restaurant.getCompanyId(), document,false);
 	}
 
 	@Override
@@ -158,7 +158,7 @@ public class RestaurantIndexer extends BaseIndexer {
 
 		actionableDynamicQuery.performActions();
 
-		SearchEngineUtil.updateDocuments(getSearchEngineId(), companyId, documents);
+		SearchEngineUtil.updateDocuments(getSearchEngineId(), companyId, documents,false);
 	}
 
 	@Override

@@ -24,7 +24,6 @@ import com.liferay.util.bridges.mvc.MVCPortlet;
 import com.smile.plugins.Permissions.RestaurantsPermission;
 import com.smile.plugins.model.Restaurant;
 import com.smile.plugins.portlet.validator.RestaurantValidator;
-import com.smile.plugins.service.ExtAssetEntryLocalService;
 import com.smile.plugins.service.ExtAssetEntryLocalServiceUtil;
 import com.smile.plugins.service.RestaurantLocalServiceUtil;
 import com.smile.plugins.service.RestaurantServiceUtil;
@@ -44,6 +43,10 @@ import javax.portlet.PortletURL;
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 
+/**
+ * @author guillaumelenoir
+ *
+ */
 public class RestaurantController extends MVCPortlet {
 
 	/**
@@ -121,7 +124,7 @@ public class RestaurantController extends MVCPortlet {
 	public void init()
 		throws PortletException {
 
-		System.out.println("init");
+		LOGGER.info("init");
 		super.init();
 	}
 
@@ -129,7 +132,7 @@ public class RestaurantController extends MVCPortlet {
 	@Override
 	public void destroy() {
 
-		System.out.println("destroy");
+		LOGGER.info("destroy");
 		super.destroy();
 	}
 
@@ -253,6 +256,13 @@ public class RestaurantController extends MVCPortlet {
 		
 	}
 
+	/**
+	 * @param uploadPortletRequest
+	 * @param themeDisplay
+	 * @return
+	 * @throws PortalException
+	 * @throws SystemException
+	 */
 	private Restaurant restaurantFromRequest(UploadPortletRequest uploadPortletRequest, ThemeDisplay themeDisplay)
 		throws PortalException, SystemException {
 
