@@ -9,7 +9,7 @@
 		
 		<template-extension>vm</template-extension>
 		<settings>
-			<setting key="portlet-setup-show-borders-default" value="false" />
+			<setting configurable="true" key="portlet-setup-show-borders-default"  type="checkbox"  value="false" />
 			<setting configurable="true" key="show-menu" value="true" type="checkbox" />
 			<setting configurable="true" key="show-footer" value="true" type="checkbox" />
 			<setting configurable="true" key="show-header" value="true" type="checkbox" />
