@@ -1,6 +1,16 @@
-/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+@import "compass";
+@import "mixins";
 
+/* ---------- smile css ---------- */
+@import url(portlet/helloword.css);
+@import url(portlet/documentlibrary.css);
 
-.aui .helloworld-mvc-portlet {
-	background-color: red;
-}
+@import url(base/base.css);
+@import url(base/navigation.css);
+
+@import url(custom_common.css);
+@import url(color_schemes/common.css);
+@import url(color_schemes/dark.css);
+@import url(color_schemes/light.css);
+@import url(color_schemes/green.css);
+@import url(color_schemes/orange.css);

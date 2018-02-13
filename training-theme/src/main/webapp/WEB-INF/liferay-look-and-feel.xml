@@ -6,6 +6,8 @@
 		<version>6.2.5+</version>
 	</compatibility>
 	<theme id="training" name="training-theme" >
+		
+		<template-extension>vm</template-extension>
 		<settings>
 			<setting key="portlet-setup-show-borders-default" value="false" />
 			<setting configurable="true" key="show-menu" value="true" type="checkbox" />
@@ -14,5 +16,24 @@
 			<setting configurable="true" key="use-header-profil" value="false" type="checkbox" />
 			<setting configurable="true" key="show-background" value="false" type="checkbox" />
 		</settings>
+
+		<color-scheme id="01" name="Default">
+			<css-class>default</css-class>
+			<color-scheme-images-path>${images-path}/color_schemes/${css-class}</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="02" name="Dark">
+			<css-class>dark</css-class>
+		</color-scheme>
+		<color-scheme id="03" name="Light">
+			<css-class>light</css-class>
+		</color-scheme>
+		<color-scheme id="04" name="orange">
+			<css-class>orange</css-class>
+		</color-scheme>
+		<color-scheme id="05" name="green">
+			<css-class>green</css-class>
+		</color-scheme>
 	</theme>
 </look-and-feel>
+
+

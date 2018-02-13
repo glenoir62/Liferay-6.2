@@ -1,0 +1,30 @@
+@import "compass";
+
+$backgroundColorHelloword: #1273C7;
+$backgroundColorActionsHelloword: #118ADE;
+
+.aui {
+	.helloworld-mvc-portlet {
+		
+		.portlet-borderless-container {
+			@include box-shadow($backgroundColorHelloword 2px 2px 10px);
+			background-color: $backgroundColorHelloword;
+			@include border-radius(5px);
+			color: white;
+			
+			.portlet-borderless-bar {
+				.portlet-title-default,.portlet-actions {
+					background-color: $backgroundColorActionsHelloword;
+				}
+				.portlet-title-default:hover, .portlet-actions:hover {
+					background-color: $backgroundColorActionsHelloword;
+				}
+			}
+			.portlet-body {
+				
+			}
+		}
+
+		
+	}
+}

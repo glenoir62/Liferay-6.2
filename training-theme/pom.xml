@@ -90,5 +90,6 @@
 	<properties>
 		<liferay.theme.parent>classic</liferay.theme.parent>
 		<liferay.theme.type>vm</liferay.theme.type>
+		<liferay.version>6.2.5</liferay.version>
 	</properties>
 </project>

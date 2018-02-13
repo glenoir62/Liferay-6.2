@@ -1,0 +1,23 @@
+
+@import "compass";
+@import "mixins";
+
+$navitemGradientEnd: #b31067;
+$navitemGradientStart: #c71273;
+
+.aui .portlet-document-library .portlet-borderless-container {
+	
+	.navbar .nav > li > a, a {
+		color: white;
+	}
+	a {
+		color: red; 
+	}
+	
+	
+	.navbar-inner{
+		color: white;
+	    background-color: $navitemGradientStart;
+		@include background-image(linear-gradient($navitemGradientStart, $navitemGradientEnd));
+	}
+}

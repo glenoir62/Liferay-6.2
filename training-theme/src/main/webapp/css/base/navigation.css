@@ -1,0 +1,12 @@
+@import "compass";
+@import "mixins";
+
+$navigationGradientEnd: #1273c7;
+$navigationGradientStart: #0e5898;
+
+.aui #navigation .navbar-inner {
+	color: white;
+    background-color: $navigationGradientStart;
+	@include background-image(linear-gradient($navigationGradientStart, $navigationGradientEnd));
+	
+}
