@@ -4,6 +4,7 @@ import com.liferay.portal.kernel.messaging.BaseMessageListener;
 import com.liferay.portal.kernel.messaging.Message;
 
 import com.smile.plugins.service.ClpSerializer;
+import com.smile.plugins.service.ExtAssetEntryLocalServiceUtil;
 import com.smile.plugins.service.RestaurantLocalServiceUtil;
 import com.smile.plugins.service.RestaurantServiceUtil;
 
@@ -20,6 +21,8 @@ public class ClpMessageListener extends BaseMessageListener {
 
         if (command.equals("undeploy") &&
                 servletContextName.equals(getServletContextName())) {
+            ExtAssetEntryLocalServiceUtil.clearService();
+
             RestaurantLocalServiceUtil.clearService();
 
             RestaurantServiceUtil.clearService();

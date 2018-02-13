@@ -25,6 +25,7 @@ import com.liferay.portlet.messageboards.service.persistence.MBMessagePersistenc
 
 import com.smile.plugins.model.Restaurant;
 import com.smile.plugins.service.RestaurantLocalService;
+import com.smile.plugins.service.persistence.ExtAssetEntryFinder;
 import com.smile.plugins.service.persistence.RestaurantPersistence;
 
 import java.io.Serializable;
@@ -48,6 +49,10 @@ import javax.sql.DataSource;
 public abstract class RestaurantLocalServiceBaseImpl
     extends BaseLocalServiceImpl implements RestaurantLocalService,
         IdentifiableBean {
+    @BeanReference(type = com.smile.plugins.service.ExtAssetEntryLocalService.class)
+    protected com.smile.plugins.service.ExtAssetEntryLocalService extAssetEntryLocalService;
+    @BeanReference(type = ExtAssetEntryFinder.class)
+    protected ExtAssetEntryFinder extAssetEntryFinder;
     @BeanReference(type = com.smile.plugins.service.RestaurantLocalService.class)
     protected com.smile.plugins.service.RestaurantLocalService restaurantLocalService;
     @BeanReference(type = com.smile.plugins.service.RestaurantService.class)
@@ -376,6 +381,43 @@ public abstract class RestaurantLocalServiceBaseImpl
     public Restaurant updateRestaurant(Restaurant restaurant)
         throws SystemException {
         return restaurantPersistence.update(restaurant);
+    }
+
+    /**
+     * Returns the ext asset entry local service.
+     *
+     * @return the ext asset entry local service
+     */
+    public com.smile.plugins.service.ExtAssetEntryLocalService getExtAssetEntryLocalService() {
+        return extAssetEntryLocalService;
+    }
+
+    /**
+     * Sets the ext asset entry local service.
+     *
+     * @param extAssetEntryLocalService the ext asset entry local service
+     */
+    public void setExtAssetEntryLocalService(
+        com.smile.plugins.service.ExtAssetEntryLocalService extAssetEntryLocalService) {
+        this.extAssetEntryLocalService = extAssetEntryLocalService;
+    }
+
+    /**
+     * Returns the ext asset entry finder.
+     *
+     * @return the ext asset entry finder
+     */
+    public ExtAssetEntryFinder getExtAssetEntryFinder() {
+        return extAssetEntryFinder;
+    }
+
+    /**
+     * Sets the ext asset entry finder.
+     *
+     * @param extAssetEntryFinder the ext asset entry finder
+     */
+    public void setExtAssetEntryFinder(ExtAssetEntryFinder extAssetEntryFinder) {
+        this.extAssetEntryFinder = extAssetEntryFinder;
     }
 
     /**

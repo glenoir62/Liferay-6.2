@@ -22,6 +22,8 @@ import com.liferay.util.bridges.mvc.MVCPortlet;
 import com.smile.plugins.Permissions.RestaurantsPermission;
 import com.smile.plugins.model.Restaurant;
 import com.smile.plugins.portlet.validator.RestaurantValidator;
+import com.smile.plugins.service.ExtAssetEntryLocalService;
+import com.smile.plugins.service.ExtAssetEntryLocalServiceUtil;
 import com.smile.plugins.service.RestaurantLocalServiceUtil;
 import com.smile.plugins.service.RestaurantServiceUtil;
 
@@ -55,7 +57,7 @@ public class RestaurantController extends MVCPortlet {
 	@Override
 	public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
 		throws IOException, PortletException {
-		System.out.println("doview");
+		LOGGER.info("doview");
 
 		ThemeDisplay themeDisplay = (ThemeDisplay) renderRequest.getAttribute(WebKeys.THEME_DISPLAY);
 
@@ -92,6 +94,14 @@ public class RestaurantController extends MVCPortlet {
 		renderRequest.setAttribute("searchRestaurantContainer", searchRestaurantContainer);
 
 		renderRequest.setAttribute("hasAddRight", hasAddRight);
+		
+		
+		try {
+			LOGGER.info("test custom sql " + ExtAssetEntryLocalServiceUtil.getJournalArticleCountByGroupIdCategories(null, null, groupId));
+		} catch (SystemException e) {
+			LOGGER.error(e);
+		}
+		
 
 		super.doView(renderRequest, renderResponse);
 	}

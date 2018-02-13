@@ -66,4 +66,8 @@
 		
 	</entity>
 	
+	<entity name="ExtAssetEntry" local-service="true" remote-service="false">
+		<reference package-path="com.liferay.portlet.asset" entity="AssetEntry" />
+	</entity>
+	
 </service-builder>
