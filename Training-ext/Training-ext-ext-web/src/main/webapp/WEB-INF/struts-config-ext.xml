@@ -3,5 +3,14 @@
 
 <struts-config>
 	<action-mappings>
+		<action path="/document_library/edit_file_entry" type="com.liferay.portlet.documentlibrary.action.ExtEditFileEntryAction">
+			<forward name="portlet.document_library.edit_file_entry" path="portlet.document_library.edit_file_entry" />
+			<forward name="portlet.document_library.error" path="portlet.document_library.error" />
+		</action>
+		
+		<action path="/document_library/view_file_entry" type="com.liferay.portlet.documentlibrary.action.ExtEditFileEntryAction">
+			<forward name="portlet.document_library.edit_file_entry" path="portlet.document_library.view_file_entry" />
+			<forward name="portlet.document_library.error" path="portlet.document_library.error" />
+		</action>
 	</action-mappings>
 </struts-config>
