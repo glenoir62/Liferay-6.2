@@ -1,8 +1,5 @@
 # Formation6.2
 
-For deploying ext :
-
-mvn clean install liferay:direct-deploy
 
 DEMO PLUGIN
 
@@ -31,3 +28,27 @@ Example :
   	</profile>
   </profiles>
 ```
+
+For custom queries :
+https://dev.liferay.com/develop/tutorials/-/knowledge_base/6-2/developing-custom-sql-queries
+
+For Service builder :
+https://dev.liferay.com/develop/tutorials/-/knowledge_base/6-2/service-builder
+
+For deploying ext :
+https://dev.liferay.com/develop/tutorials/-/knowledge_base/6-2/advanced-customization-with-ext-plugins
+
+mvn clean install liferay:direct-deploy
+
+For hook :
+https://dev.liferay.com/develop/tutorials/-/knowledge_base/6-2/customizing-liferay-portal
+
+For layout and themes :
+https://dev.liferay.com/develop/tutorials/-/knowledge_base/6-2/themes-and-layout-templates
+
+MVC portlet :
+
+https://dev.liferay.com/develop/tutorials/-/knowledge_base/6-2/developing-jsp-portlets-using-liferay-mvc
+
+
+
