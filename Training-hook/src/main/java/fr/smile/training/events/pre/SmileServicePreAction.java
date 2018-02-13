@@ -42,7 +42,7 @@ public class SmileServicePreAction extends Action {
 			// Get user token
 			String username = GetterUtil.getString(session.getAttribute("LIFERAY_SHARED_IZBERG_USERNAME"));
 
-			boolean voiture = GetterUtil.getBoolean(user.getExpandoBridge().getAttribute("voiture"));
+			String voiture = GetterUtil.getString(user.getExpandoBridge().getAttribute("voiture"));
 
 
 			// Send var to theme portal_normal.vm and web content
