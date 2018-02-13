@@ -1,6 +1,7 @@
 
 package com.smile.plugins.portlet.restaurant;
 
+import com.liferay.portal.kernel.dao.orm.QueryUtil;
 import com.liferay.portal.kernel.dao.search.SearchContainer;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
@@ -18,6 +19,7 @@ import com.liferay.portal.service.ServiceContext;
 import com.liferay.portal.service.ServiceContextFactory;
 import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.portal.util.PortalUtil;
+import com.liferay.portlet.asset.model.AssetEntry;
 import com.liferay.util.bridges.mvc.MVCPortlet;
 import com.smile.plugins.Permissions.RestaurantsPermission;
 import com.smile.plugins.model.Restaurant;
@@ -58,6 +60,8 @@ public class RestaurantController extends MVCPortlet {
 	public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
 		throws IOException, PortletException {
 		LOGGER.info("doview");
+		
+		// see https://dev.liferay.com/develop/tutorials/-/knowledge_base/6-2/service-builder
 
 		ThemeDisplay themeDisplay = (ThemeDisplay) renderRequest.getAttribute(WebKeys.THEME_DISPLAY);
 
@@ -96,8 +100,14 @@ public class RestaurantController extends MVCPortlet {
 		renderRequest.setAttribute("hasAddRight", hasAddRight);
 		
 		
+		// See https://dev.liferay.com/develop/tutorials/-/knowledge_base/6-2/developing-custom-sql-queries
 		try {
-			LOGGER.info("test custom sql " + ExtAssetEntryLocalServiceUtil.getJournalArticleCountByGroupIdCategories(null, null, groupId));
+			LOGGER.info("test custom sql get journal article count for this group = " + ExtAssetEntryLocalServiceUtil.getJournalArticleCountByGroupIdCategories(null, null, groupId));
+			List<AssetEntry> assetEntries =	ExtAssetEntryLocalServiceUtil.getJournalArticleByGroupIdCategories(QueryUtil.ALL_POS, QueryUtil.ALL_POS, null, null, groupId);
+			
+			for (AssetEntry assetEntry : assetEntries) {
+				LOGGER.info("assetEntry = " + assetEntry.getTitle(themeDisplay.getLocale()));
+			}
 		} catch (SystemException e) {
 			LOGGER.error(e);
 		}
