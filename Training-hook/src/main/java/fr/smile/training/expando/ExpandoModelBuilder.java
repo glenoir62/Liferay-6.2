@@ -20,8 +20,9 @@ import com.liferay.portlet.expando.service.ExpandoColumnLocalServiceUtil;
 import com.liferay.portlet.expando.service.ExpandoTableLocalServiceUtil;
 
 public class ExpandoModelBuilder {
-	private final static Log log = LogFactoryUtil
-			.getLog(ExpandoModelBuilder.class);
+	
+	private final static Log log = LogFactoryUtil.getLog(ExpandoModelBuilder.class);
+	
 	private final static String EXPANDO_TABLE_NAME = "CUSTOM_FIELDS";
 
 	protected long companyId;
