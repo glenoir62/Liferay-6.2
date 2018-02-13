@@ -28,11 +28,11 @@ Example :
   	</profile>
   </profiles>
 ```
-```
+
 Then set your liferay portal in developer mode :
 
 https://dev.liferay.com/develop/tutorials/-/knowledge_base/6-2/using-developer-mode-with-themes
-```
+
 
 For custom queries :
 https://dev.liferay.com/develop/tutorials/-/knowledge_base/6-2/developing-custom-sql-queries
