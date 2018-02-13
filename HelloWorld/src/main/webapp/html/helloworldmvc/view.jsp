@@ -4,6 +4,8 @@
 
 <liferay-ui:message key="fr.smile.training.helloworldportlet.title"/>
 
+<liferay-ui:message key="fr.smile.training.helloworld.message"/>
+
 <h2>${model}</h2>
 
 <h2>${textTranslated}</h2>

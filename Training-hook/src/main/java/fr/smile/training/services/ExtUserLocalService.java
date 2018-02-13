@@ -28,6 +28,12 @@ public class ExtUserLocalService extends UserLocalServiceWrapper {
 		return super.deleteUser(userId);
 	}
 	
+	@Override
+	public User getUser(long userId) throws PortalException, SystemException {
+		LOGGER.info("Get user from wrapper" + userId);
+		
+		return super.getUser(userId);
+	}
 	
 
 }

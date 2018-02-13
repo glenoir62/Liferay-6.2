@@ -8,13 +8,13 @@ import com.liferay.portlet.expando.model.ExpandoColumnConstants;
  *
  */
 public enum UserExpandoEnum {
-	FONCTION("fonction", ExpandoColumnConstants.STRING_ARRAY,
-			new String[] { "display-type=selection-list" }), INSCRIT("inscrit",
-			ExpandoColumnConstants.BOOLEAN), CGV("cgv",
-			ExpandoColumnConstants.BOOLEAN), CGU("cgu",
-			ExpandoColumnConstants.BOOLEAN), DATE_VALIDATION_CGV(
-			"date_validation_cgv", ExpandoColumnConstants.DATE), DATE_VALIDATION_CGU(
-			"date_validation_cgU", ExpandoColumnConstants.DATE);
+	FONCTION("fonction", ExpandoColumnConstants.STRING_ARRAY,new String[] { "display-type=selection-list" }),
+	INSCRIT("inscrit",ExpandoColumnConstants.BOOLEAN),
+	CGV("cgv", ExpandoColumnConstants.BOOLEAN),
+	CGU("cgu", ExpandoColumnConstants.BOOLEAN),
+	DATE_VALIDATION_CGV("date_validation_cgv", ExpandoColumnConstants.DATE),
+	DATE_VALIDATION_CGU("date_validation_cgU", ExpandoColumnConstants.DATE),
+	VOITURE("voiture", ExpandoColumnConstants.STRING);
 	;
 
 	private String name;

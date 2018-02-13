@@ -5,6 +5,7 @@ import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.util.WebKeys;
 import com.liferay.portal.model.Layout;
+import com.liferay.portal.model.User;
 import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.util.bridges.mvc.MVCPortlet;
 
@@ -93,6 +94,11 @@ public class HelloworldMVCPortlet extends MVCPortlet {
 		renderRequest.setAttribute("model", model);
 		renderRequest.setAttribute("textTranslated", textTranslated);
 		renderRequest.setAttribute("modelList", modelList);
+		
+		// get user
+		User user = themeDisplay.getUser();
+		
+		LOGGER.info("voiture " + user.getExpandoBridge().getAttribute("voiture"));
 		
 		
 		

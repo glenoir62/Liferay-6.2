@@ -2,9 +2,18 @@
 <!DOCTYPE hook PUBLIC "-//Liferay//DTD Hook 6.2.0//EN" "http://www.liferay.com/dtd/liferay-hook_6_2_0.dtd">
 
 <hook>
+
 	<portal-properties>portal.properties</portal-properties>
 
+	<language-properties>
+		content/Language.properties
+	</language-properties>
+	<language-properties>
+		content/Language_en_US.properties
+	</language-properties>
+	
 	<custom-jsp-dir>/custom_jsps</custom-jsp-dir>
+	
 	<service>
 		<service-type>
 			com.liferay.portal.service.UserLocalService
@@ -13,4 +22,5 @@
 			fr.smile.training.services.ExtUserLocalService
 		</service-impl>
 	</service>
+
 </hook>
