@@ -50,6 +50,9 @@ https://dev.liferay.com/develop/tutorials/-/knowledge_base/6-2/customizing-lifer
 
 For layout and themes :
 https://dev.liferay.com/develop/tutorials/-/knowledge_base/6-2/themes-and-layout-templates
+https://sass-lang.com/
+http://compass-style.org/
+http://getbootstrap.com/2.3.2/
 
 MVC portlet :
 
