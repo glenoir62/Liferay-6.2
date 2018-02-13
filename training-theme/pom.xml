@@ -18,7 +18,7 @@
 						<phase>generate-sources</phase>
 						<goals>
 							<goal>theme-merge</goal>
-							<goal>build-css</goal>
+<!-- 							<goal>build-css</goal> -->
 							<goal>build-thumbnail</goal>
 						</goals>
 					</execution>
@@ -88,7 +88,7 @@
 		</dependency>
 	</dependencies>
 	<properties>
-		<liferay.theme.parent>_styled</liferay.theme.parent>
+		<liferay.theme.parent>classic</liferay.theme.parent>
 		<liferay.theme.type>vm</liferay.theme.type>
 	</properties>
 </project>

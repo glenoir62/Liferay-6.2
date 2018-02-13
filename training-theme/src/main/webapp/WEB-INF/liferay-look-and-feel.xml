@@ -5,5 +5,14 @@
 	<compatibility>
 		<version>6.2.5+</version>
 	</compatibility>
-	<theme id="training" name="training-theme" />
+	<theme id="training" name="training-theme" >
+		<settings>
+			<setting key="portlet-setup-show-borders-default" value="false" />
+			<setting configurable="true" key="show-menu" value="true" type="checkbox" />
+			<setting configurable="true" key="show-footer" value="true" type="checkbox" />
+			<setting configurable="true" key="show-header" value="true" type="checkbox" />
+			<setting configurable="true" key="use-header-profil" value="false" type="checkbox" />
+			<setting configurable="true" key="show-background" value="false" type="checkbox" />
+		</settings>
+	</theme>
 </look-and-feel>

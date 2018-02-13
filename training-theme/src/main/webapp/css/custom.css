@@ -1,0 +1,6 @@
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+
+
+.aui .container-fluid {
+	background-color: grey;
+}
